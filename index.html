@@ -11,93 +11,32 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --white: #FAFCFF;
-    --off-white: #F4F8FF;
-    --blue-pale: #EBF3FF;
-    --blue-light: #C8DEFF;
-    --blue-mid: #6499D0;
-    --blue-deep: #1A4A8A;
-    --blue-dark: #0D2E5C;
-    --gold: #C9A84C;
-    --gold-light: #E8D5A0;
-    --gold-pale: #FDF8ED;
-    --text-dark: #1A1E2E;
-    --text-mid: #4A5568;
-    --text-light: #8A9AB5;
-    --shadow-sm: 0 2px 16px rgba(26,74,138,0.07);
-    --shadow-md: 0 8px 40px rgba(26,74,138,0.12);
-    --shadow-lg: 0 20px 60px rgba(26,74,138,0.18);
-    --radius: 16px;
-    --radius-sm: 10px;
-    --font-display: 'Cormorant Garamond', serif;
-    --font-head: 'Playfair Display', serif;
-    --font-body: 'DM Sans', sans-serif;
+    --white: #FAFCFF; --off-white: #F4F8FF; --blue-pale: #EBF3FF; --blue-light: #C8DEFF;
+    --blue-mid: #6499D0; --blue-deep: #1A4A8A; --blue-dark: #0D2E5C; --gold: #C9A84C;
+    --gold-light: #E8D5A0; --gold-pale: #FDF8ED; --text-dark: #1A1E2E; --text-mid: #4A5568;
+    --text-light: #8A9AB5; --shadow-sm: 0 2px 16px rgba(26,74,138,0.07); --shadow-md: 0 8px 40px rgba(26,74,138,0.12);
+    --shadow-lg: 0 20px 60px rgba(26,74,138,0.18); --radius: 16px; --radius-sm: 10px;
+    --font-display: 'Cormorant Garamond', serif; --font-head: 'Playfair Display', serif; --font-body: 'DM Sans', sans-serif;
   }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
-  body {
-    font-family: var(--font-body);
-    background: var(--white);
-    color: var(--text-dark);
-    overflow-x: hidden;
-    line-height: 1.6;
-  }
-
-  /* ── SCROLLBAR ── */
+  body { font-family: var(--font-body); background: var(--white); color: var(--text-dark); overflow-x: hidden; line-height: 1.6; }
   ::-webkit-scrollbar { width: 5px; }
   ::-webkit-scrollbar-track { background: var(--off-white); }
   ::-webkit-scrollbar-thumb { background: var(--blue-mid); border-radius: 10px; }
-
-  /* ── NAV ── */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-    background: rgba(250,252,255,0.92);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(200,222,255,0.4);
-    padding: 0 5vw;
-    display: flex; align-items: center; justify-content: space-between;
-    height: 72px;
-    transition: box-shadow 0.3s;
-  }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(250,252,255,0.92); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(200,222,255,0.4); padding: 0 5vw; display: flex; align-items: center; justify-content: space-between; height: 72px; transition: box-shadow 0.3s; }
   nav.scrolled { box-shadow: var(--shadow-md); }
   .nav-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-  .nav-logo {
-    width: 44px; height: 44px; border-radius: 50%;
-    background: linear-gradient(135deg, var(--blue-deep), var(--blue-mid));
-    display: flex; align-items: center; justify-content: center;
-    color: white; font-family: var(--font-display); font-size: 18px; font-weight: 600;
-    box-shadow: 0 4px 16px rgba(26,74,138,0.3);
-  }
+  .nav-logo { width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, var(--blue-deep), var(--blue-mid)); display: flex; align-items: center; justify-content: center; color: white; font-family: var(--font-display); font-size: 18px; font-weight: 600; box-shadow: 0 4px 16px rgba(26,74,138,0.3); }
   .nav-brand-text { line-height: 1.2; }
   .nav-brand-name { font-family: var(--font-display); font-size: 16px; font-weight: 600; color: var(--blue-dark); letter-spacing: 0.02em; }
   .nav-brand-sub { font-size: 11px; color: var(--text-light); font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase; }
   .nav-links { display: flex; align-items: center; gap: 32px; }
   .nav-links a { text-decoration: none; font-size: 14px; font-weight: 500; color: var(--text-mid); transition: color 0.2s; letter-spacing: 0.02em; }
   .nav-links a:hover { color: var(--blue-deep); }
-  .nav-cta {
-    background: linear-gradient(135deg, var(--blue-deep), var(--blue-mid));
-    color: white !important;
-    padding: 10px 22px; border-radius: 50px;
-    font-size: 13px !important; font-weight: 600 !important;
-    box-shadow: 0 4px 16px rgba(26,74,138,0.3);
-    transition: transform 0.2s, box-shadow 0.2s !important;
-  }
+  .nav-cta { background: linear-gradient(135deg, var(--blue-deep), var(--blue-mid)); color: white !important; padding: 10px 22px; border-radius: 50px; font-size: 13px !important; font-weight: 600 !important; box-shadow: 0 4px 16px rgba(26,74,138,0.3); transition: transform 0.2s, box-shadow 0.2s !important; }
   .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 6px 24px rgba(26,74,138,0.4) !important; }
-  .nav-hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
-  .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--blue-dark); border-radius: 2px; transition: 0.3s; }
-
-  /* ── HERO ── */
-  .hero {
-    min-height: 100vh;
-    background: linear-gradient(160deg, #EBF3FF 0%, #F4F8FF 40%, #FDF8ED 100%);
-    display: flex; align-items: center;
-    padding: 100px 5vw 60px;
-    position: relative; overflow: hidden;
-  }
-  .hero-bg-circle { position: absolute; border-radius: 50%; background: radial-gradient(circle, rgba(100,153,208,0.12) 0%, transparent 70%); }
-  .hero-bg-circle.c1 { width: 700px; height: 700px; top: -200px; right: -100px; }
-  .hero-bg-circle.c2 { width: 400px; height: 400px; bottom: -100px; left: -100px; background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%); }
-  .hero-grid-pattern { position: absolute; inset: 0; opacity: 0.03; background-image: linear-gradient(var(--blue-deep) 1px, transparent 1px), linear-gradient(90deg, var(--blue-deep) 1px, transparent 1px); background-size: 50px 50px; }
+  .hero { min-height: 100vh; background: linear-gradient(160deg, #EBF3FF 0%, #F4F8FF 40%, #FDF8ED 100%); display: flex; align-items: center; padding: 100px 5vw 60px; position: relative; overflow: hidden; }
   .hero-inner { max-width: 1200px; margin: 0 auto; width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; position: relative; z-index: 1; }
   .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(201,168,76,0.12); border: 1px solid rgba(201,168,76,0.3); padding: 8px 16px; border-radius: 50px; font-size: 12px; font-weight: 600; color: #9A6E1C; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 28px; }
   .hero-title { font-family: var(--font-display); font-size: clamp(42px, 5vw, 64px); font-weight: 600; line-height: 1.1; color: var(--blue-dark); margin-bottom: 8px; letter-spacing: -0.01em; }
@@ -115,7 +54,7 @@
   .hero-stat-num { font-family: var(--font-display); font-size: 32px; font-weight: 600; color: var(--blue-deep); line-height: 1; }
   .hero-stat-num span { font-size: 18px; color: var(--gold); }
   .hero-stat-label { font-size: 12px; color: var(--text-light); font-weight: 500; margin-top: 4px; letter-spacing: 0.04em; }
-  .hero-image-wrap { position: relative; }
+  .hero-image-wrap { position: relative; animation: fadeUp 0.8s 0.2s ease both; }
   .hero-image-card { position: relative; background: linear-gradient(160deg, var(--blue-pale) 0%, white 100%); border-radius: 24px 24px 24px 80px; overflow: hidden; box-shadow: var(--shadow-lg); aspect-ratio: 4/5; max-height: 560px; }
   .hero-image-placeholder { width: 100%; height: 100%; background: linear-gradient(160deg, #C8DEFF 0%, #E8F3FF 40%, #D4E8FF 100%); display: flex; flex-direction: column; align-items: center; justify-content: flex-end; }
   .doctor-silhouette { width: 85%; max-width: 340px; }
@@ -129,7 +68,6 @@
   .hero-image-tag2-sub { font-size: 11px; color: var(--text-light); }
   .hero-gold-line { position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--gold), transparent); border-radius: 0 0 0 80px; }
 
-  /* ── SECTIONS ── */
   section { padding: 96px 5vw; }
   .section-inner { max-width: 1200px; margin: 0 auto; }
   .section-tag { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
@@ -138,7 +76,6 @@
   .section-title em { font-style: italic; color: var(--blue-mid); }
   .section-sub { font-size: 16px; color: var(--text-mid); max-width: 520px; line-height: 1.7; }
 
-  /* ── QUALIFICATIONS ── */
   .qual-section { background: var(--gold-pale); }
   .qual-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
   .qual-list { margin-top: 32px; display: flex; flex-direction: column; gap: 16px; }
@@ -148,16 +85,15 @@
   .qual-item-title { font-size: 15px; font-weight: 600; color: var(--blue-dark); }
   .qual-item-sub { font-size: 13px; color: var(--text-light); margin-top: 2px; }
 
-  /* ── SERVICES ── */
   .services-section { background: var(--white); }
   .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 56px; }
   .service-card { background: var(--off-white); border-radius: var(--radius); padding: 36px 28px; position: relative; overflow: hidden; border: 1px solid transparent; transition: all 0.3s; }
   .service-card:hover { background: white; border-color: var(--blue-light); box-shadow: var(--shadow-md); transform: translateY(-4px); }
-  .service-icon { width: 56px; height: 56px; border-radius: 14px; background: var(--blue-pale); display: flex; align-items: center; justify-content: center; font-size: 28px; margin-bottom: 20px; }
+  .service-icon { width: 56px; height: 56px; border-radius: 14px; background: var(--blue-pale); display: flex; align-items: center; justify-content: center; font-size: 28px; margin-bottom: 20px; transition: background 0.3s; }
+  .service-card:hover .service-icon { background: linear-gradient(135deg, var(--blue-deep), var(--blue-mid)); }
   .service-title { font-family: var(--font-display); font-size: 20px; font-weight: 600; color: var(--blue-dark); margin-bottom: 10px; }
   .service-desc { font-size: 14px; color: var(--text-mid); line-height: 1.7; }
 
-  /* ── APPOINTMENT ── */
   .appt-section { background: linear-gradient(160deg, var(--blue-dark) 0%, #0F3868 100%); }
   .appt-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 56px; align-items: start; margin-top: 48px; }
   .appt-fee-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius); padding: 28px; display: flex; align-items: center; gap: 20px; }
@@ -166,20 +102,23 @@
   .time-slot { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: white; padding: 8px 16px; border-radius: 50px; font-size: 13px; cursor: pointer; transition: all 0.2s; }
   .time-slot:hover, .time-slot.active { background: var(--blue-mid); }
   .appt-form-card { background: white; border-radius: var(--radius); padding: 36px; box-shadow: var(--shadow-lg); }
-  .form-input, .form-select { width: 100%; padding: 12px 16px; border-radius: var(--radius-sm); border: 1.5px solid var(--blue-light); background: var(--off-white); outline: none; }
-  .form-submit { width: 100%; padding: 15px; border-radius: 50px; background: linear-gradient(135deg, var(--blue-deep), var(--blue-mid)); color: white; border: none; font-weight: 600; cursor: pointer; }
+  .form-label { display: block; font-size: 12px; font-weight: 600; color: var(--text-mid); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; }
+  .form-input, .form-select { width: 100%; padding: 12px 16px; border-radius: var(--radius-sm); border: 1.5px solid var(--blue-light); background: var(--off-white); font-family: var(--font-body); font-size: 14px; color: var(--text-dark); outline: none; transition: border-color 0.2s; }
+  .form-input:focus, .form-select:focus { border-color: var(--blue-mid); }
+  .form-submit { width: 100%; padding: 15px; border-radius: 50px; background: linear-gradient(135deg, var(--blue-deep), var(--blue-mid)); color: white; border: none; font-size: 15px; font-weight: 600; cursor: pointer; box-shadow: 0 8px 24px rgba(26,74,138,0.35); transition: transform 0.2s; }
+  .form-submit:hover { transform: translateY(-2px); }
 
-  /* ── FOOTER ── */
   footer { background: #07192D; color: white; padding: 72px 5vw 32px; }
   .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 48px; }
   .footer-logo { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
-  .footer-logo-icon { width: 48px; height: 48px; border-radius: 12px; background: linear-gradient(135deg, var(--blue-deep), var(--blue-mid)); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 20px; font-weight: 600; }
+  .footer-logo-icon { width: 48px; height: 48px; border-radius: 12px; background: linear-gradient(135deg, var(--blue-deep), var(--blue-mid)); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 20px; font-weight: 600; color: white; }
 
-  /* ── STICKY CTA ── */
   .sticky-cta { position: fixed; bottom: 24px; right: 24px; display: flex; flex-direction: column; gap: 10px; z-index: 999; }
-  .sticky-btn { display: flex; align-items: center; gap: 10px; padding: 14px 20px; border-radius: 50px; font-size: 14px; font-weight: 600; text-decoration: none; box-shadow: var(--shadow-lg); transition: transform 0.2s; }
+  .sticky-btn { display: flex; align-items: center; gap: 10px; padding: 14px 20px; border-radius: 50px; cursor: pointer; font-size: 14px; font-weight: 600; text-decoration: none; box-shadow: var(--shadow-lg); transition: transform 0.2s; }
+  .sticky-btn:hover { transform: translateY(-2px); }
+  
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
 
-  /* ── MEDIA QUERIES ── */
   @media (max-width: 1024px) {
     .hero-inner { grid-template-columns: 1fr; gap: 48px; }
     .hero-image-wrap { max-width: 440px; margin: 0 auto; }
@@ -190,139 +129,101 @@
   @media (max-width: 768px) {
     section { padding: 64px 5vw; }
     .nav-links { display: none; }
-    .nav-hamburger { display: flex; }
+    .nav-hamburger { display: flex; cursor: pointer; flex-direction: column; gap: 5px; }
+    .nav-hamburger span { width: 24px; height: 2px; background: var(--blue-dark); border-radius: 2px; }
     .services-grid { grid-template-columns: 1fr; }
     .footer-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
 <body>
-
 <nav id="mainNav">
-  <a class="nav-brand" href="#">
-    <div class="nav-logo">NA</div>
-    <div class="nav-brand-text">
-      <div class="nav-brand-name">Dr. Neha Agarwal</div>
-      <div class="nav-brand-sub">ENT Specialist · Guwahati</div>
-    </div>
-  </a>
-  <div class="nav-links">
-    <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a href="#appointment" class="nav-cta">Book Appointment</a>
-  </div>
+  <a class="nav-brand" href="#"><div class="nav-logo">NA</div><div class="nav-brand-text"><div class="nav-brand-name">Dr. Neha Agarwal</div><div class="nav-brand-sub">ENT Specialist · Guwahati</div></div></a>
+  <div class="nav-links"><a href="#services">Services</a><a href="#about">About</a><a href="#reviews">Reviews</a><a href="#appointment" class="nav-cta">Book Appointment</a></div>
   <div class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></div>
 </nav>
-
 <section class="hero" id="home">
-  <div class="hero-bg-circle c1"></div>
-  <div class="hero-bg-circle c2"></div>
-  <div class="hero-grid-pattern"></div>
   <div class="hero-inner">
     <div class="hero-content">
       <div class="hero-badge">Guwahati's Trusted ENT Specialist</div>
       <div class="hero-title"><em>Expert ENT Care</em><br>in Guwahati</div>
       <div class="hero-doctor-name">Dr. Neha Agarwal</div>
-      <div class="hero-sub">17+ Years of Excellence in Advanced ENT Treatments. MBBS · MS-ENT · Pediatric ENT · Head & Neck Surgery.</div>
-      <div class="hero-ctas">
-        <a href="#appointment" class="btn-primary">📅 Book Appointment</a>
-        <a href="tel:+919999999999" class="btn-outline">📞 Call Now</a>
-      </div>
+      <div class="hero-sub">17+ Years of Excellence in Advanced ENT Treatments. MBBS · MS-ENT · Pediatric ENT · Head & Neck Surgery. Compassionate care, precise diagnosis.</div>
+      <div class="hero-ctas"><a href="#appointment" class="btn-primary">📅 Book Appointment</a><a href="tel:+919999999999" class="btn-outline">📞 Call Now</a></div>
+      <div class="hero-stats"><div class="hero-stat"><div class="hero-stat-num">17<span>+</span></div><div class="hero-stat-label">Years Experience</div></div><div class="hero-stat"><div class="hero-stat-num">10k<span>+</span></div><div class="hero-stat-label">Patients Treated</div></div></div>
     </div>
     <div class="hero-image-wrap">
       <div class="hero-image-card">
         <div class="hero-image-placeholder">
-           <svg class="doctor-silhouette" viewBox="0 0 340 420" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <ellipse cx="170" cy="100" rx="58" ry="62" fill="#B8D4F0"/>
-            <rect x="90" y="155" width="160" height="220" rx="20" fill="#2B6CB0"/>
-            <rect x="150" y="225" width="40" height="28" rx="4" fill="white" opacity="0.9"/>
+          <svg class="doctor-silhouette" viewBox="0 0 340 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="170" cy="100" rx="58" ry="62" fill="#B8D4F0"/><rect x="90" y="155" width="160" height="220" rx="20" fill="#2B6CB0"/><rect x="150" y="225" width="40" height="28" rx="4" fill="white" opacity="0.9"/>
           </svg>
         </div>
+        <div class="hero-gold-line"></div>
       </div>
-      <div class="hero-image-tag">
-        <div class="hero-image-tag-icon">🏆</div>
-        <div class="hero-image-tag-text"><div class="hero-image-tag-num">17+ Yrs</div><div class="hero-image-tag-sub">Experience</div></div>
-      </div>
+      <div class="hero-image-tag"><div class="hero-image-tag-icon">🏆</div><div class="hero-image-tag-text"><div class="hero-image-tag-num">17+ Yrs</div><div class="hero-image-tag-sub">Expert Experience</div></div></div>
     </div>
   </div>
 </section>
-
+<!-- ABOUT -->
 <section class="qual-section" id="about">
   <div class="section-inner">
-    <div class="qual-inner">
-      <div>
-        <div class="section-tag">About Dr. Neha</div>
-        <div class="section-title">Qualified, Trusted & <em>Patient-First</em></div>
-        <div class="qual-list">
-          <div class="qual-item"><div class="qual-item-icon">🎓</div><div><div class="qual-item-title">MS (ENT) — Master of Surgery</div></div></div>
-          <div class="qual-item"><div class="qual-item-icon">👶</div><div><div class="qual-item-title">Pediatric ENT Specialist</div></div></div>
-        </div>
-      </div>
+    <div class="section-tag">About Dr. Neha</div>
+    <div class="section-title">Qualified, Trusted & <em>Patient-First</em></div>
+    <p class="section-sub">Dr. Neha Agarwal is a highly experienced ENT specialist with over 17 years of dedicated practice in Guwahati.</p>
+    <div class="qual-list">
+      <div class="qual-item"><div class="qual-item-icon">🎓</div><div><div class="qual-item-title">MS (ENT) — Master of Surgery in ENT</div><div class="qual-item-sub">Advanced specialisation from reputed institutions</div></div></div>
+      <div class="qual-item"><div class="qual-item-icon">👶</div><div><div class="qual-item-title">Pediatric ENT Specialist</div><div class="qual-item-sub">Specialised care for children & infants</div></div></div>
     </div>
   </div>
 </section>
-
+<!-- SERVICES -->
 <section class="services-section" id="services">
   <div class="section-inner">
     <div class="section-tag">Our Specialties</div>
     <div class="section-title">Comprehensive ENT <em>Care</em></div>
     <div class="services-grid">
-      <div class="service-card"><div class="service-icon">👂</div><div class="service-title">Ear Treatment</div><div class="service-desc">Expert diagnosis and treatment of hearing loss and infections.</div></div>
-      <div class="service-card"><div class="service-icon">👃</div><div class="service-title">Nose & Sinus Care</div><div class="service-desc">Advanced treatment for sinusitis and nasal conditions.</div></div>
-      <div class="service-card"><div class="service-icon">🗣️</div><div class="service-title">Throat Disorders</div><div class="service-desc">Management of tonsillitis and voice disorders.</div></div>
+      <div class="service-card"><div class="service-icon">👂</div><div class="service-title">Ear Treatment</div><div class="service-desc">Expert diagnosis and treatment of hearing loss, infections, and tinnitus.</div></div>
+      <div class="service-card"><div class="service-icon">👃</div><div class="service-title">Nose & Sinus Care</div><div class="service-desc">Advanced treatment for chronic sinusitis, polyps, and allergy.</div></div>
+      <div class="service-card"><div class="service-icon">🗣️</div><div class="service-title">Throat Disorders</div><div class="service-desc">Management of tonsils, voice disorders, and vocal cord issues.</div></div>
     </div>
   </div>
 </section>
-
+<!-- APPOINTMENT -->
 <section class="appt-section" id="appointment">
   <div class="section-inner">
     <div class="appt-grid">
       <div class="appt-info">
         <div class="appt-fee-card"><div class="appt-fee-icon">💊</div><div><div class="appt-fee-amount">₹ 500 <small>/ visit</small></div></div></div>
+        <div style="margin-top:28px;color:white;font-size:14px;line-height:1.8;">Mon – Sat: 9:00 AM – 1:00 PM<br>Mon – Sat: 5:00 PM – 8:00 PM</div>
       </div>
       <div class="appt-form-card">
         <div id="bookingForm">
-          <div class="form-group"><label class="form-label">Full Name</label><input type="text" class="form-input" id="patientName"></div>
-          <div class="form-group"><label class="form-label">Phone Number</label><input type="tel" class="form-input" id="patientPhone"></div>
+          <div class="form-group"><label class="form-label">Full Name</label><input type="text" class="form-input" id="patientName" placeholder="Your name"></div>
+          <div class="form-group"><label class="form-label">Phone Number</label><input type="tel" class="form-input" id="patientPhone" placeholder="+91"></div>
           <button class="form-submit" onclick="submitBooking()">📅 Confirm Appointment</button>
         </div>
-        <div class="booking-success" id="bookingSuccess"><h3>Confirmed!</h3></div>
+        <div class="booking-success" id="bookingSuccess" style="display:none;text-align:center;"><h2>✅ Confirmed!</h2><p>We will call you shortly.</p></div>
       </div>
     </div>
   </div>
 </section>
-
 <footer>
   <div class="footer-grid">
-    <div class="footer-brand">
-      <div class="footer-logo"><div class="footer-logo-icon">NA</div><div><div class="footer-logo-text">Dr. Neha Agarwal</div></div></div>
-      <p>17+ years of expert ENT care in Guwahati.</p>
-    </div>
+    <div class="footer-brand"><div class="footer-logo"><div class="footer-logo-icon">NA</div><div><div class="footer-logo-text">Dr. Neha Agarwal</div></div></div><p>Providing expert ENT care in Guwahati for 17+ years.</p></div>
   </div>
 </footer>
-
-<div class="sticky-cta">
-  <a href="https://wa.me/919999999999" target="_blank" class="sticky-btn" style="background:#25D366;color:white">💬 WhatsApp</a>
-</div>
-
+<div class="sticky-cta"><a href="https://wa.me/919999999999" target="_blank" class="sticky-btn" style="background:#25D366;color:white">💬 WhatsApp</a></div>
 <script>
   window.addEventListener('scroll', () => { document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 20); });
   function submitBooking() {
-    const name = document.getElementById('patientName').value;
-    const phone = document.getElementById('patientPhone').value;
+    const name = document.getElementById('patientName').value; const phone = document.getElementById('patientPhone').value;
     if (!name || !phone) { alert('Fill all fields'); return; }
-    document.getElementById('bookingForm').style.display = 'none';
-    document.getElementById('bookingSuccess').style.display = 'block';
+    document.getElementById('bookingForm').style.display = 'none'; document.getElementById('bookingSuccess').style.display = 'block';
   }
   if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => { if (entry.isIntersecting) { entry.target.style.opacity = '1'; entry.target.style.transform = 'translateY(0)'; } });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.service-card, .qual-item').forEach(el => {
-      el.style.opacity = '0'; el.style.transform = 'translateY(20px)';
-      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-      observer.observe(el);
-    });
+    const ob = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)'; } }); }, { threshold: 0.1 });
+    document.querySelectorAll('.service-card, .qual-item').forEach(el => { el.style.opacity = '0'; el.style.transform = 'translateY(20px)'; el.style.transition = 'opacity 0.5s ease, transform 0.5s ease'; ob.observe(el); });
   }
 </script>
 </body>
