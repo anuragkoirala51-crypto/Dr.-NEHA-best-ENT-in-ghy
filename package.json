@@ -1,0 +1,10 @@
+{
+  "name": "dr-neha-ent",
+  "version": "1.0.0",
+  "description": "ENT Specialist Website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx -y serve ."
+  },
+  "dependencies": {}
+}
